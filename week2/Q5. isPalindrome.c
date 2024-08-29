@@ -1,3 +1,6 @@
+/* Q5.Write a program to check if a 
+ * given string or number is a palindrome.
+ */
 #include<stdio.h>
 
 int main() 

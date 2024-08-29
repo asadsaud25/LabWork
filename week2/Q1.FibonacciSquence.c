@@ -1,3 +1,6 @@
+/* Q1. Write a program to print the 
+ * first 10 numbers of the Fibonacci sequence.
+ */
 #include<stdio.h>
 
 int main() {

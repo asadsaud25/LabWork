@@ -1,3 +1,6 @@
+/* Q3. Write a program to check whether 
+ * a given number is prime or not.
+ */
 #include<stdio.h>
 #include<math.h>
 int main() {

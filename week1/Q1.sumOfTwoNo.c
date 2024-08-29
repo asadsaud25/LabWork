@@ -1,3 +1,7 @@
+/*  Q1. Write a program that takes two integers from the
+ *	user and prints their sum
+ */
+
 #include<stdio.h>
 
 int main() {

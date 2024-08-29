@@ -1,3 +1,6 @@
+/* Q1.Write a program to convert a
+ * binary number to its decimal equivalent
+ */
 #include<stdio.h>
 
 int main() {

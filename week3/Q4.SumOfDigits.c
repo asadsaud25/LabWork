@@ -1,3 +1,6 @@
+/* Q4.  Write a program to calculate 
+ * the sum of the digits of a given number
+ */
 #include<stdio.h>
 
 int main() {

@@ -1,3 +1,7 @@
+/* Q4. Write a program to create a simple calculator 
+ * that can add, subtract, multiply, and divide two
+ * numbers
+ */
 #include<stdio.h>
 
 int main() {
