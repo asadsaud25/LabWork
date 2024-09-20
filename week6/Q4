@@ -1,0 +1,13 @@
+# Input the distance between two cities (in km.) through the keyboard and write a shell script 
+# program to convert and print this distance in meters, feet, inches and centimeters.
+
+#!/bin/bash
+read -p "Enter distance between two city (in km) : " dist
+m=$(echo "$dist*1000" | bc)
+echo "distance in metre: $m metre"
+feet=$(echo "$dist*3280.84" | bc)
+echo "distance in feet: $feet feet" 
+inch=$(echo "$dist*39370.01" | bc)
+echo "distance in inches: $inch inches"
+centi=$(echo "$dist*100000" | bc)
+echo "distance in centimetre: $centi cm"

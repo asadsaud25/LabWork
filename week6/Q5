@@ -1,0 +1,15 @@
+# The length and breadth of a rectangle and radius of a circle are input though the keyboard. 
+# Write a shell script program to calculate the area and perimeter of the rectangle and the 
+# area & circumference of the circle.
+
+#! /bin/bash
+read -p "Entre length and breadth of rectangle: " l b
+read -p "Entre radius of a circle: " r
+areaOfRec=$(echo "$l*$b" | bc )
+areaOfCircle=$(echo "3.14*$r*$r" | bc)
+pre=$(echo "$(echo "$l+$b" | bc)*2" | bc)
+cir=$(echo "2*3.14*$r" | bc)
+echo "Primetre of Rectangle = $pre m"
+echo "Area of Rectangle = $areaOfRec m^2"
+echo "circumference of circle = $cir m"
+echo "Area of Circle = $areaOfCircle m^2"
