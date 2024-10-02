@@ -7,7 +7,7 @@ This repository contains the complete lab works (14 weeks) for the BCA 5th Semes
 **Subject:** 
 
 - Object Oriented Analysis & Design (OOAD) 💻
-- Operating System 🖥️
+- Operating System & Shell Programming🖥️
 
 **Additional Information:**
 
