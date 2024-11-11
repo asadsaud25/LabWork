@@ -1,5 +1,4 @@
 #include<stdio.h>
- 
 int main()
 {
     
@@ -25,17 +24,17 @@ int main()
     printf("Enter Time Slot:");
     scanf("%d", &time_slot);
  
-    
     int total = 0,  counter = 0;
     printf("Process ID\t\tBurst Tim\t\tTurnaround Time\t\tWaiting Time\n");
+    
     for(total=0, i = 0; x!=0; )  
     {  
         
         if(temp_burst_time[i] <= time_slot && temp_burst_time[i] > 0)    
         {  
-            total = total + temp_burst_time[i];  
+            total += temp_burst_time[i];  
             temp_burst_time[i] = 0;  
-            counter=1;  
+            counter=1; 
         }     
         else if(temp_burst_time[i] > 0)  
         {  
@@ -47,22 +46,14 @@ int main()
             x--; 
             printf("\nProcess No %d  \t\t %d\t\t\t\t %d\t\t\t %d", i+1, burst_time[i],
                    total-arr_time[i], total-arr_time[i]-burst_time[i]);  
+                   
             wait_time = wait_time+total-arr_time[i]-burst_time[i];  
             ta_time += total -arr_time[i];  
             counter =0;     
         }  
-        if(i==n-1)  
-        {  
-            i=0;  
-        }  
-        else if(arr_time[i+1]<=total)  
-        {  
-            i++;  
-        }  
-        else  
-        {  
-            i=0;  
-        }  
+        if(i==n-1)  i=0; 
+        else if(arr_time[i+1]<=total) i++; 
+        else  i=0;  
     }  
     float average_wait_time = wait_time * 1.0 / n;
     float average_turnaround_time = ta_time * 1.0 / n;

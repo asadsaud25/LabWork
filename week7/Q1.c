@@ -1,31 +1,45 @@
-#include<stdio.h>
-int main(){
-	int n, i, j;
+#include <stdio.h>
+#include <limits.h>
+void findSecondLargest(int arr[], int n) {
+	int i;
+    int first, second;
+    
+    if (n < 2) {
+        printf("Invalid input: Array should have at least two elements.");
+        return;
+    }
+
+    first = second = INT_MIN;
+    for ( i = 0; i < n; i++) {
+        if (arr[i] > first) {
+            second = first;
+            first = arr[i];
+        } else if (arr[i] > second && arr[i] != first) {
+            second = arr[i];
+        }
+    }
+
+    if (second == INT_MIN)
+        printf("There is no second largest element.\n");
+    else
+        printf("The second largest element is %d.\n", second);
+}
+
+int main() {
+	int n, i;
 	printf("enter the size:");
 	scanf("%d",&n);
 	
-	int a[n];
+	int arr[n];
 	printf("enter the elements:");
 	for( i=0;i<n;i++){
-		scanf("%d",&a[i]);
+		scanf("%d",&arr[i]);
 	}
 	printf("elements are: \n");
 	for( i=0;i<n;i++){
-		printf("%d ",a[i]);
+		printf("%d ",arr[i]);
 	}
-	
-	int max,smax;
-	int temp;
-	for( i=0;i<n;i++){
-		for( j=0;j<n;j++){
-			if(a[j]>a[j+1]){
-				temp = a[j];
-				a[j] = a[j+1];
-				a[j+1] = temp;
-			}
-		}
-	}
-	printf("\nsecond largest elemet is: %d",a[n-2]);
-	
-	
+    findSecondLargest(arr, n);
+    return 0;
 }
+

@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<limits.h>
 #define MAX 100
 
 int main() {
@@ -53,7 +53,7 @@ int main() {
 
     while (completed < n) {
         int idx = -1;
-        int highest_priority = 9999;  
+        int highest_priority = INT_MAX;  
 
         
         for ( i = 0; i < n; i++) {
