@@ -1,0 +1,18 @@
+#! /bin/bash
+
+if [ $# -eq 0 ]; 
+then
+	echo "Usage $0 <file1> <file2>"
+else
+	f1=$1
+	f2=$2
+	if cmp -s "$f1" "$f2";
+	then 
+		echo "files are same deleting $f1"
+		echo "$f1 deleted"
+		rm "$f1"
+	else
+		echo "files are not same"
+	fi
+fi
+exit 0
